@@ -21,6 +21,7 @@ export default function AddTaskForm({ addTask }) {
           value={newTask}
           onChange={(e) => setNewTask(e.target.value)}
           className="addTask-input"
+          placeholder="Add a task..."
         />
         <button type="submit" className="addTask-button">Add</button>
       </form>
