@@ -1,5 +1,9 @@
+/* https://coolors.co/palette/e5d9f2-f5efff-cdc1ff-a594f9-7371fc */
+
 .header {
-  background: hsl(0, 50%, 50%);
+  background: #7371fc;
+  color: #f5efff;
+  height: 60px;
 }
 
 .header-container,
@@ -7,6 +11,12 @@
   width: 800px;
   max-width: calc(100% - 60px);
   margin: 0 auto;
+}
+
+.header-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .header-title {
@@ -32,12 +42,29 @@
   padding: 15px;
 
   width: 100%;
-  background: hsl(206, 74%, 85%);
+  /* background: hsl(206, 74%, 85%); */
+  background: #E5D9F2;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
+.tasklist-item:nth-child(2n) {
+  /* background: hsl(206, 74%, 75%); */
+  background: #F5EFFF;
+}
+
+.tasklist-item:nth-child(2n) .tasklist-item-button {
+  background: #E5D9F2;
+  
+}
+
+/* .tasklist-item:nth-child(2n) .tasklist-item-button::before,
+.tasklist-item:nth-child(2n) .tasklist-item-button::after {
+  background: #7371FC;
+} */
+
 
 .tasklist-item-input,
 .tasklist-item-input:checked {
@@ -102,6 +129,7 @@
   width: 40px;
   height: 40px;
   /* background: orange; */
+  background-color: #F5EFFF;
   border: none;
   position: relative;
   cursor: pointer;
@@ -114,29 +142,25 @@
   display: block;
   width: 20px;
   height: 2px;
-  background: grey;
+  background: #A594F9;
+  background: #7371FC;
   top: 50%;
   left: 50%;
   position: absolute;
-
 
   /* display: inline-block;
   content: "\00d7"; This will render the 'X' */
 }
 
 .tasklist-item-button::before {
-  transform: translate(-50%,-50%) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
 }
 
 .tasklist-item-button::after {
-  transform: translate(-50%,-50%) rotate(-45deg);
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 
-
-.tasklist-item:nth-child(2n) {
-  background: hsl(206, 74%, 75%);
-}
 
 .addTask-form {
   margin-bottom: 30px;
@@ -162,7 +186,8 @@
   /* border: 1px solid #979797; */
   border: none;
   font-size: 22px;
-  background-color: #0e7e9f;
+  background-color: #7371fc;
+  color: #f5efff;
   cursor: pointer;
 }
 
