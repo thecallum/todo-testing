@@ -1,4 +1,5 @@
-import Task from "../components/task";
+import PropTypes from "prop-types";
+import Task from "./task";
 
 export default function TaskList({ tasks, toggleCheckbox, deleteTask }) {
   if (tasks.length === 0)
@@ -19,3 +20,8 @@ export default function TaskList({ tasks, toggleCheckbox, deleteTask }) {
   );
 }
 
+TaskList.propTypes = {
+  tasks: PropTypes.array.isRequired,
+  toggleCheckbox: PropTypes.func.isRequired,
+  deleteTask: PropTypes.func.isRequired,
+};

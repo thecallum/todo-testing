@@ -1,4 +1,4 @@
-import { configure } from "@testing-library/react";
+import PropTypes from "prop-types";
 
 export default function Task({ task, index, toggleCheckbox, deleteTask }) {
   const handleToggleCheckbox = () => {
@@ -36,3 +36,9 @@ export default function Task({ task, index, toggleCheckbox, deleteTask }) {
   );
 }
 
+Task.propTypes = {
+  task: PropTypes.object.isRequired,
+  index: PropTypes.number.isRequired,
+  toggleCheckbox: PropTypes.func.isRequired,
+  deleteTask: PropTypes.func.isRequired,
+};
