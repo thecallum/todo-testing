@@ -7,18 +7,10 @@ import TaskList from "./components/taskList";
 
 function App() {
   const [tasks, setTasks] = useState([
-    {
-      value: "Get groceries",
-      completed: false,
-    },
-    {
-      value: "Book dentist",
-      completed: false,
-    },
-    {
-      value: "Procrastinate",
-      completed: true,
-    },
+    // {
+    //   value: "Get groceries",
+    //   completed: false,
+    // }
   ]);
 
   const addTask = (value) => {
