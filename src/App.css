@@ -35,43 +35,36 @@
   flex-direction: column;
 }
 
+.tasklist-empty {
+  padding: 15px;
+  background: #f5efff;
+}
+
 .tasklist-item {
   margin: 0;
   padding: 0;
   display: block;
   padding: 15px;
-
   width: 100%;
-  /* background: hsl(206, 74%, 85%); */
-  background: #E5D9F2;
-
+  background: #e5d9f2;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .tasklist-item:nth-child(2n) {
-  /* background: hsl(206, 74%, 75%); */
-  background: #F5EFFF;
+  background: #f5efff;
 }
 
 .tasklist-item:nth-child(2n) .tasklist-item-button {
-  background: #E5D9F2;
-  
+  background: #e5d9f2;
 }
-
-/* .tasklist-item:nth-child(2n) .tasklist-item-button::before,
-.tasklist-item:nth-child(2n) .tasklist-item-button::after {
-  background: #7371FC;
-} */
-
 
 .tasklist-item-input,
 .tasklist-item-input:checked {
   -webkit-appearance: none;
   width: 0;
   height: 0;
-  margin: 0;
   padding: 0;
 }
 
@@ -80,7 +73,6 @@
   align-items: center;
   flex-wrap: wrap;
   margin-right: 15px;
-  /* margin-top: 15px; */
   margin-top: -15px;
 }
 
@@ -93,7 +85,7 @@
   margin-right: 15px !important;
   position: relative;
   cursor: pointer;
-  background-color: white;    
+  background-color: white;
   flex-shrink: 0;
   margin-top: 15px;
 }
@@ -135,8 +127,7 @@
 .tasklist-item-button {
   width: 40px;
   height: 40px;
-  /* background: orange; */
-  background-color: #F5EFFF;
+  background-color: #f5efff;
   border: none;
   position: relative;
   cursor: pointer;
@@ -150,14 +141,11 @@
   display: block;
   width: 20px;
   height: 2px;
-  background: #A594F9;
-  background: #7371FC;
+  background: #a594f9;
+  background: #7371fc;
   top: 50%;
   left: 50%;
   position: absolute;
-
-  /* display: inline-block;
-  content: "\00d7"; This will render the 'X' */
 }
 
 .tasklist-item-button::before {
@@ -168,11 +156,8 @@
   transform: translate(-50%, -50%) rotate(-45deg);
 }
 
-
-
 .addTask-form {
   margin-bottom: 30px;
-  /* background-color: orange; */
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -181,23 +166,18 @@
 .addTask-input {
   flex-grow: 1;
   display: block;
-  /* margin-right: 15px; */
   border-radius: 3px;
   border: 2px solid #979797;
   padding: 0 10px;
   font-size: 22px;
   height: 60px;
-
 }
 
 .addTask-button {
   height: 60px;
-
-  /* width: 100px; */
   width: 100%;
   margin-top: 15px;
   border-radius: 3px;
-  /* border: 1px solid #979797; */
   border: none;
   font-size: 22px;
   background-color: #7371fc;
@@ -209,8 +189,6 @@
   .addTask-form {
     flex-direction: row;
   }
-
-
 
   .addTask-button {
     width: 100px;
