@@ -1,10 +1,13 @@
 import { useState } from "react";
-import PropTypes from "prop-types";
 
-export default function AddTaskForm({ addTask }) {
-  const [newTask, setNewTask] = useState("");
+type Props = {
+  addTask: (value: string) => void;
+}
 
-  const handleAddTask = (e) => {
+export default function ({ addTask }: Props) {
+  const [newTask, setNewTask] = useState<string>("");
+
+  const handleAddTask = (e: React.FormEvent): void => {
     e.preventDefault();
 
     if (newTask === "") return;
@@ -17,8 +20,6 @@ export default function AddTaskForm({ addTask }) {
     <form onSubmit={handleAddTask} className="addTask-form">
       <input
         type="text"
-        name=""
-        id=""
         value={newTask}
         onChange={(e) => setNewTask(e.target.value)}
         className="addTask-input"
@@ -32,6 +33,3 @@ export default function AddTaskForm({ addTask }) {
   );
 }
 
-AddTaskForm.propTypes = {
-  addTask: PropTypes.func.isRequired,
-};

@@ -1,11 +1,23 @@
-import PropTypes from "prop-types";
+import { Task } from '../../interfaces/interfaces'
 
-export default function Task({ task, index, toggleCheckbox, deleteTask }) {
-  const handleToggleCheckbox = () => {
+type Props = {
+  task: Task;
+  index: number;
+  toggleCheckbox: (index: number, completed: boolean) => void;
+  deleteTask: (index: number) => void;
+};
+
+export default function ({
+  task,
+  index,
+  toggleCheckbox,
+  deleteTask,
+}: Props) {
+  const handleToggleCheckbox = (): void => {
     toggleCheckbox(index, !task.completed);
   };
 
-  const handleDeleteTask = () => {
+  const handleDeleteTask = (): void => {
     if (!window.confirm("Are you sure you want to delete this task?")) return;
 
     deleteTask(index);
@@ -38,11 +50,4 @@ export default function Task({ task, index, toggleCheckbox, deleteTask }) {
     </li>
   );
 }
-
-Task.propTypes = {
-  task: PropTypes.object.isRequired,
-  index: PropTypes.number.isRequired,
-  toggleCheckbox: PropTypes.func.isRequired,
-  deleteTask: PropTypes.func.isRequired,
-};
 

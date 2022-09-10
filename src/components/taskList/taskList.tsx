@@ -1,14 +1,20 @@
-import PropTypes from "prop-types";
-import Task from "../task/task";
+import TaskItem from "../task/task";
+import { Task } from '../../interfaces/interfaces'
 
-export default function TaskList({ tasks, toggleCheckbox, deleteTask }) {
+type Props = {
+  tasks: Task[],
+  toggleCheckbox: (index: number, completed: boolean) => void,
+  deleteTask: (index: number) => void,
+}
+
+export default function ({ tasks, toggleCheckbox, deleteTask }: Props) {
   if (tasks.length === 0)
     return <div className="taskList-empty" data-cy="no-tasks-message">You have no tasks</div>;
 
   return (
     <ul className="taskList">
       {tasks.map((task, index) => (
-        <Task
+        <TaskItem
           key={index}
           task={task}
           index={index}
@@ -19,9 +25,3 @@ export default function TaskList({ tasks, toggleCheckbox, deleteTask }) {
     </ul>
   );
 }
-
-TaskList.propTypes = {
-  tasks: PropTypes.array.isRequired,
-  toggleCheckbox: PropTypes.func.isRequired,
-  deleteTask: PropTypes.func.isRequired,
-};
