@@ -78,7 +78,7 @@ describe("ToDo App", () => {
 
     // confirm dialog should appear
     cy.on("window:confirm", (txt) => {
-      expect(txt).to.contains("Are you sure you want to delete this task?");
+      expect(txt).toContain("Are you sure you want to delete this task?");
 
       // don't confirm message
       return false;
@@ -101,7 +101,7 @@ describe("ToDo App", () => {
 
     // confirm dialog should appear
     cy.on("window:confirm", (txt) => {
-      expect(txt).to.contains("Are you sure you want to delete this task?");
+      expect(txt).toContain("Are you sure you want to delete this task?");
 
       // confirm message
       return true;

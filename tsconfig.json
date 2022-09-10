@@ -2,7 +2,7 @@
   "compilerOptions": {
     "jsx": "react-jsx" /* Specify JSX code generation: 'preserve', 'react-native', or 'react'. */,
     "types": [
-      "react", "jest", "node"
+      "react", "jest", "node", "cypress"
     ] /* Type declaration files to be included in compilation. */,
 
 
