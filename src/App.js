@@ -1,8 +1,8 @@
 import "./App.css";
 import { useState } from "react";
 
-import Header from "./components/header";
-import AddTaskForm from "./components/addTaskForm";
+import Header from "./components/header/header";
+import AddTaskForm from "./components/addTaskForm/addTaskForm";
 import TaskList from "./components/taskList/taskList";
 
 function App() {

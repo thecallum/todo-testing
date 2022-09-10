@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddTaskForm Renders component 1`] = `
+<DocumentFragment>
+  <form
+    class="addTask-form"
+  >
+    <input
+      class="addTask-input"
+      id=""
+      name=""
+      placeholder="Add a task"
+      type="text"
+      value=""
+    />
+    <button
+      class="addTask-button"
+      type="submit"
+    >
+      Add
+    </button>
+  </form>
+</DocumentFragment>
+`;
