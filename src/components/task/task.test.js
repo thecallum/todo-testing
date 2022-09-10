@@ -43,7 +43,7 @@ describe("Task", () => {
       );
 
       // Act
-      const checkbox = container.querySelector("input.tasklist-item-input");
+      const checkbox = container.querySelector("input.taskList-item-input");
       userEvent.click(checkbox);
 
       // Assert
@@ -72,7 +72,7 @@ describe("Task", () => {
     );
 
     // Act
-    const button = container.querySelector("button.tasklist-item-button");
+    const button = container.querySelector("button.taskList-item-button");
     userEvent.click(button);
 
     // Assert
@@ -101,7 +101,7 @@ describe("Task", () => {
     );
 
     // Act
-    const button = container.querySelector("button.tasklist-item-button");
+    const button = container.querySelector("button.taskList-item-button");
     userEvent.click(button);
 
     // Assert

@@ -12,17 +12,17 @@ export default function Task({ task, index, toggleCheckbox, deleteTask }) {
   };
 
   return (
-    <li className="tasklist-item" data-cy="task">
-      <div className="tasklist-item-left">
+    <li className="taskList-item" data-cy="task">
+      <div className="taskList-item-left">
         <input
-          className="tasklist-item-input"
+          className="taskList-item-input"
           type="checkbox"
           checked={task.completed}
           onChange={handleToggleCheckbox}
           data-cy="task-checkbox"
         />
         <span
-          className={`tasklist-item-value ${task.completed ? "completed" : ""}`}
+          className={`taskList-item-value ${task.completed ? "completed" : ""}`}
           data-cy="task-value"
         >
           {task.value}
@@ -30,7 +30,7 @@ export default function Task({ task, index, toggleCheckbox, deleteTask }) {
       </div>
 
       <button
-        className="tasklist-item-button"
+        className="taskList-item-button"
         onClick={handleDeleteTask}
         aria-label="Delete task"
         data-cy="delete-task-button"

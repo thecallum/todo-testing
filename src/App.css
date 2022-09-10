@@ -28,19 +28,19 @@
   margin: 30px auto;
 }
 
-.tasklist {
+.taskList {
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
 }
 
-.tasklist-empty {
+.taskList-empty {
   padding: 15px;
   background: #f5efff;
 }
 
-.tasklist-item {
+.taskList-item {
   margin: 0;
   padding: 0;
   display: block;
@@ -52,23 +52,23 @@
   align-items: center;
 }
 
-.tasklist-item:nth-child(2n) {
+.taskList-item:nth-child(2n) {
   background: #f5efff;
 }
 
-.tasklist-item:nth-child(2n) .tasklist-item-button {
+.taskList-item:nth-child(2n) .taskList-item-button {
   background: #e5d9f2;
 }
 
-.tasklist-item-input,
-.tasklist-item-input:checked {
+.taskList-item-input,
+.taskList-item-input:checked {
   -webkit-appearance: none;
   width: 0;
   height: 0;
   padding: 0;
 }
 
-.tasklist-item-left {
+.taskList-item-left {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -76,7 +76,7 @@
   margin-top: -15px;
 }
 
-.tasklist-item-input {
+.taskList-item-input {
   margin-right: 5px;
   width: 40px !important;
   height: 40px !important;
@@ -90,7 +90,7 @@
   margin-top: 15px;
 }
 
-.tasklist-item-input::after {
+.taskList-item-input::after {
   opacity: 0;
   display: block;
   content: "";
@@ -112,19 +112,19 @@
   clip-path: polygon(0 50%, 20% 50%, 20% 80%, 100% 80%, 100% 100%, 0 100%);
 }
 
-.tasklist-item-input:checked::after {
+.taskList-item-input:checked::after {
   opacity: 1;
 }
 
-.tasklist-item-value {
+.taskList-item-value {
   margin-top: 15px;
 }
 
-.tasklist-item-value.completed {
+.taskList-item-value.completed {
   text-decoration: line-through;
 }
 
-.tasklist-item-button {
+.taskList-item-button {
   width: 40px;
   height: 40px;
   background-color: #f5efff;
@@ -135,8 +135,8 @@
   flex-shrink: 0;
 }
 
-.tasklist-item-button::before,
-.tasklist-item-button::after {
+.taskList-item-button::before,
+.taskList-item-button::after {
   content: "";
   display: block;
   width: 20px;
@@ -148,11 +148,11 @@
   position: absolute;
 }
 
-.tasklist-item-button::before {
+.taskList-item-button::before {
   transform: translate(-50%, -50%) rotate(45deg);
 }
 
-.tasklist-item-button::after {
+.taskList-item-button::after {
   transform: translate(-50%, -50%) rotate(-45deg);
 }
 

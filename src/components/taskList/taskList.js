@@ -3,10 +3,10 @@ import Task from "../task/task";
 
 export default function TaskList({ tasks, toggleCheckbox, deleteTask }) {
   if (tasks.length === 0)
-    return <div className="tasklist-empty" data-cy="no-tasks-message">You have no tasks</div>;
+    return <div className="taskList-empty" data-cy="no-tasks-message">You have no tasks</div>;
 
   return (
-    <ul className="tasklist">
+    <ul className="taskList">
       {tasks.map((task, index) => (
         <Task
           key={index}

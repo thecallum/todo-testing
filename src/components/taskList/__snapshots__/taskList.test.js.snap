@@ -3,22 +3,22 @@
 exports[`TaskList Renders component when many tasks 1`] = `
 <DocumentFragment>
   <ul
-    class="tasklist"
+    class="taskList"
   >
     <li
-      class="tasklist-item"
+      class="taskList-item"
       data-cy="task"
     >
       <div
-        class="tasklist-item-left"
+        class="taskList-item-left"
       >
         <input
-          class="tasklist-item-input"
+          class="taskList-item-input"
           data-cy="task-checkbox"
           type="checkbox"
         />
         <span
-          class="tasklist-item-value "
+          class="taskList-item-value "
           data-cy="task-value"
         >
           task description one
@@ -26,25 +26,25 @@ exports[`TaskList Renders component when many tasks 1`] = `
       </div>
       <button
         aria-label="Delete task"
-        class="tasklist-item-button"
+        class="taskList-item-button"
         data-cy="delete-task-button"
       />
     </li>
     <li
-      class="tasklist-item"
+      class="taskList-item"
       data-cy="task"
     >
       <div
-        class="tasklist-item-left"
+        class="taskList-item-left"
       >
         <input
           checked=""
-          class="tasklist-item-input"
+          class="taskList-item-input"
           data-cy="task-checkbox"
           type="checkbox"
         />
         <span
-          class="tasklist-item-value completed"
+          class="taskList-item-value completed"
           data-cy="task-value"
         >
           task description two
@@ -52,7 +52,7 @@ exports[`TaskList Renders component when many tasks 1`] = `
       </div>
       <button
         aria-label="Delete task"
-        class="tasklist-item-button"
+        class="taskList-item-button"
         data-cy="delete-task-button"
       />
     </li>
@@ -63,7 +63,7 @@ exports[`TaskList Renders component when many tasks 1`] = `
 exports[`TaskList Renders component when no tasks 1`] = `
 <DocumentFragment>
   <div
-    class="tasklist-empty"
+    class="taskList-empty"
     data-cy="no-tasks-message"
   >
     You have no tasks
