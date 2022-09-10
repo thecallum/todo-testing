@@ -3,7 +3,7 @@ import userEvent from "@testing-library/user-event";
 import Task from "./task";
 
 describe("Task", () => {
-  it("Renders component correctly", () => {
+  it("Renders component", () => {
     // Arrange
     const task = { value: "task description", completed: "false" };
     const index = 0;
@@ -11,7 +11,7 @@ describe("Task", () => {
     const deleteTask = () => {};
 
     // Act
-    render(
+    const { asFragment } = render(
       <Task
         task={task}
         index={index}
@@ -21,6 +21,7 @@ describe("Task", () => {
     );
 
     // Assert
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it.each([true, false])(
@@ -110,4 +111,3 @@ describe("Task", () => {
     expect(deleteTask).toHaveBeenCalledWith(index);
   });
 });
-

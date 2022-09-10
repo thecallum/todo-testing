@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Task Renders component 1`] = `
+<DocumentFragment>
+  <li
+    class="tasklist-item"
+  >
+    <div
+      class="tasklist-item-left"
+    >
+      <input
+        checked=""
+        class="tasklist-item-input"
+        type="checkbox"
+      />
+      <span
+        class="tasklist-item-value completed"
+      >
+        task description
+      </span>
+    </div>
+    <button
+      aria-label="Delete task"
+      class="tasklist-item-button"
+    />
+  </li>
+</DocumentFragment>
+`;
