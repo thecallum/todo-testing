@@ -3,7 +3,7 @@ import Task from "../task/task";
 
 export default function TaskList({ tasks, toggleCheckbox, deleteTask }) {
   if (tasks.length === 0)
-    return <div className="tasklist-empty">You have no tasks</div>;
+    return <div className="tasklist-empty" data-cy="no-tasks-message">You have no tasks</div>;
 
   return (
     <ul className="tasklist">
