@@ -21,7 +21,7 @@ export default function Task({ task, index, toggleCheckbox, deleteTask }) {
           onChange={handleToggleCheckbox}
         />
         <span
-          className={`tasklist-item-value ${task.completed && "completed"}`}
+          className={`tasklist-item-value ${task.completed ? "completed": ""}`}
         >
           {task.value}
         </span>

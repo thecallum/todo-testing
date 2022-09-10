@@ -5,7 +5,7 @@ import Task from "./task";
 describe("Task", () => {
   it("Renders component", () => {
     // Arrange
-    const task = { value: "task description", completed: "false" };
+    const task = { value: "task description", completed: false };
     const index = 0;
     const toggleCheckbox = () => {};
     const deleteTask = () => {};
@@ -111,3 +111,4 @@ describe("Task", () => {
     expect(deleteTask).toHaveBeenCalledWith(index);
   });
 });
+

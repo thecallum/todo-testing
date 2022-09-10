@@ -3,7 +3,7 @@ import { useState } from "react";
 
 import Header from "./components/header";
 import AddTaskForm from "./components/addTaskForm";
-import TaskList from "./components/taskList";
+import TaskList from "./components/taskList/taskList";
 
 function App() {
   const [tasks, setTasks] = useState([

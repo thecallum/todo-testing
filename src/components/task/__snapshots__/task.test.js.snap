@@ -9,12 +9,11 @@ exports[`Task Renders component 1`] = `
       class="tasklist-item-left"
     >
       <input
-        checked=""
         class="tasklist-item-input"
         type="checkbox"
       />
       <span
-        class="tasklist-item-value completed"
+        class="tasklist-item-value "
       >
         task description
       </span>

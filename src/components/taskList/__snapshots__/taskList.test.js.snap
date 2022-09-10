@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TaskList Renders component when many tasks 1`] = `
+<DocumentFragment>
+  <ul
+    class="tasklist"
+  >
+    <li
+      class="tasklist-item"
+    >
+      <div
+        class="tasklist-item-left"
+      >
+        <input
+          class="tasklist-item-input"
+          type="checkbox"
+        />
+        <span
+          class="tasklist-item-value "
+        >
+          task description one
+        </span>
+      </div>
+      <button
+        aria-label="Delete task"
+        class="tasklist-item-button"
+      />
+    </li>
+    <li
+      class="tasklist-item"
+    >
+      <div
+        class="tasklist-item-left"
+      >
+        <input
+          checked=""
+          class="tasklist-item-input"
+          type="checkbox"
+        />
+        <span
+          class="tasklist-item-value completed"
+        >
+          task description two
+        </span>
+      </div>
+      <button
+        aria-label="Delete task"
+        class="tasklist-item-button"
+      />
+    </li>
+  </ul>
+</DocumentFragment>
+`;
+
+exports[`TaskList Renders component when no tasks 1`] = `
+<DocumentFragment>
+  <div
+    class="tasklist-empty"
+  >
+    You have no tasks
+  </div>
+</DocumentFragment>
+`;
