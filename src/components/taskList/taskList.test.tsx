@@ -1,6 +1,7 @@
 import { render } from "@testing-library/react";
 import TaskList from "./taskList";
 import { Task } from '../../interfaces/interfaces'
+import { expect } from '@jest/globals';
 
 describe("TaskList", () => {
   it("Renders component when many tasks", () => {

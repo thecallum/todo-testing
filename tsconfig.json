@@ -1,4 +1,5 @@
 {
+
   "compilerOptions": {
     "jsx": "react-jsx" /* Specify JSX code generation: 'preserve', 'react-native', or 'react'. */,
     "types": [
@@ -16,12 +17,20 @@
     "noImplicitThis": true,
     "alwaysStrict": true,
     "noUnusedLocals": true,
-    "noUnusedParameters": true,
     "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
 
-    "esModuleInterop": true,
-    "moduleResolution": "node",
+    "allowJs": true, // Allow JavaScript files to be compiled
+    "allowSyntheticDefaultImports": true, // Allow default imports from modules with no default export
+    "isolatedModules": true, // Unconditionally emit imports for unresolved files
+    "resolveJsonModule": true, // Include modules imported with .json extension
+    "noEmit": true, // Do not emit output (meaning do not compile code, only perform type checking)
+    "sourceMap": true, // Generate corresponding .map file
+    "declaration": true, // Generate corresponding .d.ts file
+    "noUnusedParameters": true, // Report errors on unused parameters
+    "incremental": true, // Enable incremental compilation by reading/writing information from prior compilations to a file on disk
+    "noFallthroughCasesInSwitch": true, // Report errors for fallthrough cases in switch statement
+    "moduleResolution": "node", // Resolve modules using Node.js style
+
 
     /* Visit https://aka.ms/tsconfig to read more about this file */
 
@@ -121,6 +130,8 @@
 
     /* Completeness */
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
-    "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
+    "skipLibCheck": true,                                /* Skip type checking all .d.ts files. */
+
+ 
   }
 }
