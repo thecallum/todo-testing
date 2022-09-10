@@ -1,6 +1,7 @@
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render } from "@testing-library/react";
+import { expect } from '@jest/globals';
 import userEvent from "@testing-library/user-event";
-import Task from "./task";
+import TaskItem from "./task";
 
 describe("Task", () => {
   it("Renders component", () => {
@@ -12,7 +13,7 @@ describe("Task", () => {
 
     // Act
     const { asFragment } = render(
-      <Task
+      <TaskItem
         task={task}
         index={index}
         toggleCheckbox={toggleCheckbox}
@@ -34,7 +35,7 @@ describe("Task", () => {
       const deleteTask = () => {};
 
       const { container } = render(
-        <Task
+        <TaskItem
           task={task}
           index={index}
           toggleCheckbox={toggleCheckbox}
@@ -43,7 +44,9 @@ describe("Task", () => {
       );
 
       // Act
-      const checkbox = container.querySelector("input.taskList-item-input");
+      const checkbox = container.querySelector(
+        "input.taskList-item-input"
+      ) as Element;
       userEvent.click(checkbox);
 
       // Assert
@@ -63,7 +66,7 @@ describe("Task", () => {
       .mockImplementation(() => false);
 
     const { container } = render(
-      <Task
+      <TaskItem
         task={task}
         index={index}
         toggleCheckbox={toggleCheckbox}
@@ -72,7 +75,9 @@ describe("Task", () => {
     );
 
     // Act
-    const button = container.querySelector("button.taskList-item-button");
+    const button = container.querySelector(
+      "button.taskList-item-button"
+    ) as Element;
     userEvent.click(button);
 
     // Assert
@@ -92,7 +97,7 @@ describe("Task", () => {
       .mockImplementation(() => true);
 
     const { container } = render(
-      <Task
+      <TaskItem
         task={task}
         index={index}
         toggleCheckbox={toggleCheckbox}
@@ -101,7 +106,9 @@ describe("Task", () => {
     );
 
     // Act
-    const button = container.querySelector("button.taskList-item-button");
+    const button = container.querySelector(
+      "button.taskList-item-button"
+    ) as Element;
     userEvent.click(button);
 
     // Assert

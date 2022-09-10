@@ -5,23 +5,21 @@ import Header from "./components/header/header";
 import AddTaskForm from "./components/addTaskForm/addTaskForm";
 import TaskList from "./components/taskList/taskList";
 
-function App() {
-  const [tasks, setTasks] = useState([
-    // {
-    //   value: "Get groceries",
-    //   completed: false,
-    // }
-  ]);
+import { Task } from './interfaces/interfaces'
 
-  const addTask = (value) => {
-    const newTask = {
+function App() {
+  const [tasks, setTasks] = useState<Task[]>([]);
+
+  const addTask = (value: string): void => {
+    const newTask: Task = {
       value: value,
       completed: false,
     };
+
     setTasks([...tasks, newTask]);
   };
 
-  const toggleCheckbox = (taskIndex, completed) => {
+  const toggleCheckbox = (taskIndex: number, completed: boolean): void => {
     const newTasks = tasks.map((task, index) => {
       if (index !== taskIndex) return task;
 
@@ -34,8 +32,8 @@ function App() {
     setTasks(newTasks);
   };
 
-  const deleteTask = (taskIndex) => {
-    const newTasks = tasks.filter((task, index) => index !== taskIndex);
+  const deleteTask = (taskIndex: number): void => {
+    const newTasks = tasks.filter((_task, index) => index !== taskIndex);
 
     setTasks(newTasks);
   };

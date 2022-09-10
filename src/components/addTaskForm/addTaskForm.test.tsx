@@ -1,6 +1,7 @@
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import AddTaskForm from "./addTaskForm";
+import { expect } from '@jest/globals';
 
 describe("AddTaskForm", () => {
   it("Renders component", () => {
@@ -21,7 +22,7 @@ describe("AddTaskForm", () => {
     const { container } = render(<AddTaskForm addTask={addTask} />);
 
     // Act
-    const submitButton = container.querySelector("button.addTask-button");
+    const submitButton = container.querySelector("button.addTask-button") as Element;
     userEvent.click(submitButton);
 
     // Assert
@@ -36,12 +37,12 @@ describe("AddTaskForm", () => {
     const { container } = render(<AddTaskForm addTask={addTask} />);
 
     // Act
-    const input = container.querySelector("input.addTask-input");
+    const input = container.querySelector("input.addTask-input") as Element;
 
     userEvent.click(input);
     userEvent.keyboard(textInput);
 
-    const submitButton = container.querySelector("button.addTask-button");
+    const submitButton = container.querySelector("button.addTask-button") as Element;
     userEvent.click(submitButton);
 
     // Assert
@@ -57,12 +58,12 @@ describe("AddTaskForm", () => {
     const { container } = render(<AddTaskForm addTask={addTask} />);
 
     // Act
-    const input = container.querySelector("input.addTask-input");
+    const input = container.querySelector("input.addTask-input") as HTMLInputElement ;
 
     userEvent.click(input);
     userEvent.keyboard(textInput);
 
-    const submitButton = container.querySelector("button.addTask-button");
+    const submitButton = container.querySelector("button.addTask-button") as Element;
     userEvent.click(submitButton);
 
     // Assert

@@ -8,8 +8,6 @@ exports[`AddTaskForm Renders component 1`] = `
     <input
       class="addTask-input"
       data-cy="add-task-input"
-      id=""
-      name=""
       placeholder="Add a task"
       type="text"
       value=""
