@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import Task from "./task";
+import Task from "./task/task";
 
 export default function TaskList({ tasks, toggleCheckbox, deleteTask }) {
   if (tasks.length === 0)
