@@ -7,16 +7,19 @@ exports[`TaskList Renders component when many tasks 1`] = `
   >
     <li
       class="tasklist-item"
+      data-cy="task"
     >
       <div
         class="tasklist-item-left"
       >
         <input
           class="tasklist-item-input"
+          data-cy="task-checkbox"
           type="checkbox"
         />
         <span
           class="tasklist-item-value "
+          data-cy="task-value"
         >
           task description one
         </span>
@@ -24,10 +27,12 @@ exports[`TaskList Renders component when many tasks 1`] = `
       <button
         aria-label="Delete task"
         class="tasklist-item-button"
+        data-cy="delete-task-button"
       />
     </li>
     <li
       class="tasklist-item"
+      data-cy="task"
     >
       <div
         class="tasklist-item-left"
@@ -35,10 +40,12 @@ exports[`TaskList Renders component when many tasks 1`] = `
         <input
           checked=""
           class="tasklist-item-input"
+          data-cy="task-checkbox"
           type="checkbox"
         />
         <span
           class="tasklist-item-value completed"
+          data-cy="task-value"
         >
           task description two
         </span>
@@ -46,6 +53,7 @@ exports[`TaskList Renders component when many tasks 1`] = `
       <button
         aria-label="Delete task"
         class="tasklist-item-button"
+        data-cy="delete-task-button"
       />
     </li>
   </ul>
@@ -56,6 +64,7 @@ exports[`TaskList Renders component when no tasks 1`] = `
 <DocumentFragment>
   <div
     class="tasklist-empty"
+    data-cy="no-tasks-message"
   >
     You have no tasks
   </div>
