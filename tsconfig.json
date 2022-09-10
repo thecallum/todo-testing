@@ -2,7 +2,7 @@
   "compilerOptions": {
     "jsx": "react-jsx" /* Specify JSX code generation: 'preserve', 'react-native', or 'react'. */,
     "types": [
-      "react"
+      "react", "jest", "node"
     ] /* Type declaration files to be included in compilation. */,
 
 
@@ -19,6 +19,9 @@
     "noUnusedParameters": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
+
+    "esModuleInterop": true,
+    "moduleResolution": "node",
 
     /* Visit https://aka.ms/tsconfig to read more about this file */
 

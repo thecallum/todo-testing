@@ -1,6 +1,6 @@
-import { render, screen, fireEvent } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
+import { render } from "@testing-library/react";
 import TaskList from "./taskList";
+import { Task } from '../../interfaces/interfaces'
 
 describe("TaskList", () => {
   it("Renders component when many tasks", () => {
@@ -27,7 +27,7 @@ describe("TaskList", () => {
 
   it("Renders component when no tasks", () => {
     // Arrange
-    const tasks = [];
+    const tasks: Task[] = [];
     const toggleCheckbox = () => {};
     const deleteTask = () => {};
 
